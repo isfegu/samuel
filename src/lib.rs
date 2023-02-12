@@ -1,6 +1,11 @@
+//! Simple ASCII to Morse translator.
+//!
+//! Provides a way to translate an ASCII string to their Morse Code representation.
+
 #[macro_use]
 extern crate lazy_static;
 
+/// ASCII to Morse translator.
 pub mod morse {
     use std::collections::HashMap;
 
@@ -48,6 +53,9 @@ pub mod morse {
         };
     }
 
+    /// Translate an ASCII input into a Morse Code String.
+    ///
+    /// Only ASCII characters will be translated. Non ASCII characters will be skipped.
     pub fn translate(input: &str) -> String {
         let mut translated_string: String = "".to_string();
 

@@ -1,7 +1,15 @@
 [package]
+edition = "2021"
 name = "samuel"
 version = "0.1.0"
-edition = "2021"
+
+[lib]
+name = "samuel"
+path = "src/lib/lib.rs"
+
+[[bin]]
+name = "samuel"
+path = "src/bin/cli/bin.rs"
 
 [dependencies]
 clap = { version = "4.1.6", features = ["derive"] }

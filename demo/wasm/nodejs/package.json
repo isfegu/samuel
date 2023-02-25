@@ -1,0 +1,6 @@
+{
+  "name": "samuel-node",
+  "version": "1.0.0",
+  "description": "Una demo de cómo utilizar Samuel desde node.js",
+  "type": "module"
+}

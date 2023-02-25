@@ -9,7 +9,8 @@ a construir paquetes WebAssembly o librerías nativas, etc, partiendo de código
 
 Para poder ejecutar Samuel es necesario:
 
-* Rust
+* [Rust](https://rustup.rs/)
+* [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
 * Make
 * Visual Studio Code
 
@@ -26,6 +27,7 @@ Para poder ejecutar Samuel es necesario:
 
 ## Contribuir
 
+* Es recomendable usar Visual Studio Code, abrir el _workspace_ [samuel.code-workspace](./samuel.code-workspace) e instalar las extensiones recomendadas.
 * Deben utilizarse [Conventional Commits](https://www.conventionalcommits.org).
 * Debe utlizarse [Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) haciendo un _pull request_ contra _main_ para incorporar los cambios.
 * Deben añadirse pruebas unitarias.

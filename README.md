@@ -1,125 +1,54 @@
 # Samuel
 
-Un básico traductor de ASCII a [Morse](https://es.wikipedia.org/wiki/C%C3%B3digo_morse).
+A basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
 
-El objetivo no es tener un traductor a Morse completo y totalmente funcional, el objetivo de este repositorio es aprender
-a construir paquetes WebAssembly o librerías nativas, etc, partiendo de código Rust.
+The main goal is to learn how to build WebAssembly packages and native libraries or modules using Rust.
 
-## Requisitos
+## Requirements
 
-Para poder ejecutar Samuel es necesario:
+### Mandatory
 
 * [Rust](https://rustup.rs/)
 * [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
-* Make
-* Visual Studio Code
+* [Node.js](https://nodejs.org)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
-## Estructura
+## Repository structure
 
-* `src`:
-  * `bin`: CLI para usar Samuel.
-  * `lib`: Código fuente de Samuel en Rust.
+This project is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/workspaces.html), composed by three members:
+
+* `dohy`: A CLI for DotHyphen.
+* `dothyphen`: A simple ASCII to Morse translator.
+* `dothyphen-wasm`: A WebAssembly wrapper of DotHyphen.
+
+Moreover, you can find several demos to show how to use Samuel.
+
 * `demo`
   * `wasm`
-    * `nodejs`: Uso de Samuel como paquete WebAssembly utilizado desde Node.js.
-    * `npm`: Uso de Samuel como paquete npm utilizado desde Node.js.
-    * `web`: Uso de Samuel como paquete WebAssembly utilizado desde entorno web.
+    * `nodejs`: How to use DotHyphen from a Node.js project.
+    * `npm`: How to use DotHyphen as a npm module.
+    * `web`: How to use DotHyphen in a web page.
 
-## Contribuir
+## Contributing
 
-* Es recomendable usar Visual Studio Code, abrir el _workspace_ [samuel.code-workspace](./samuel.code-workspace) e instalar las extensiones recomendadas.
-* Deben utilizarse [Conventional Commits](https://www.conventionalcommits.org).
-* Debe utlizarse [Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) haciendo un _pull request_ contra _main_ para incorporar los cambios.
-* Deben añadirse pruebas unitarias.
+* Use Visual Studio Code opening the [samuel.code-workspace](./samuel.code-workspace) _workspace_ and installing all recommended extensions.
+* Use [Conventional Commits](https://www.conventionalcommits.org).
+* Use [Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) creating a _pull request_ to _main_.
+* Use [Semantic Versioning](https://semver.org/).
+* Add unit testing whenever possible.
 
-### Pruebas unitarias
+### Unit testing
 
-Para ejecutar las pruebas unitarias:
+To execute the _Workspace_ unit tests, run:
 
 ```bash
 ~ cargo test
 ```
 
-## Construcción
+## Usage
 
-### CLI
+To get information about how to usage Samuel, please, read the specific documentation of each crate:
 
-Se puede compilar en modo `debug`:
-
-```bash
-~ cargo build --target x86_64-unknown-linux-gnu
-```
-
-También se puede compilar en modo `release`:
-
-```bash
-~ cargo build --target x86_64-unknown-linux-gnu --release
-```
-
-> Se puede cambiar `x86_64-unknown-linux-gnu` por la arquitectura que se desee para obtener el binario adecuado.
-
-Se puede utilizar _Make_ para la compilación en modo `release` para arquitectura `x86_64-unknown-linux-gnu`:
-
-```bash
-~ make build-linux
-```
-
-El resultado de la compilación se ubicará en el directorio `target`, dentro de un subdirectorio con el nombre de la arquitectura elegida y a su vez dentro de otro subdirectorio con el nombre del modo seleccionado, por ejemplo: `target\x86_64-unknown-linux-gnu\release`.
-
-### WebAssembly
-
-Para compilar Samuel a WebAssembly existe un comando _Make_ que facilita la tarea:
-
-```bash
-~ make build-wasm
-```
-
-El resultado de la compilación se ubicará en el directorio `target\wasm32-unknown-unknown\release`.
-
-Esta compilación hace uso de _wasm-pack_ para construir todo lo necesario para que Samuel pueda ser consumido desde Javascript. El resultado de la compilación para ser usado desde Javascript se ubicará en el directorio `output/wasm`. Dentro de este directorio se crearán los siguientes subdirectorios:
-
-* `output/wasm/nodejs`: Para ser usado directamente desde una aplicación Node.js.
-* `output/wasm/npm`: Para ser usado desde una aplicación Node.js utilizando un paquete _npm_.
-* `output/wasm/web`: Para ser usado dede una página web.
-
-#### Publicación en npmjs
-
-El contenido del directorio `output/wasm/npm` es lo que debe publicarse en npmjs.com.
-
-Antes de publicar debe hacerse _login_ mediante:
-
-```bash
-output/wasm/npm ~ npm login
-```
-
-Una vez hecho el _login_ correctamente ya se puede publicar mediante:
-
-```bash
-output/wasm/npm ~ npm publish --access=public
-```
-
-## Uso
-
-### Cargo
-
-Para ejecutar Samuel desde Cargo:
-
-```bash
-~ cargo run -- --translate "Hello world"
-```
-
-### CLI
-
-```bash
-~ ./target/x86_64-unknown-linux-gnu/release/samuel --translate "Hello World"
-```
-
-> Se puede ambiar _release_ por _debug_ según el modo seleccionado en la compilación o `x86_64-unknown-linux-gnu` por la arquitectura seleccionada en la compilación.
-
-### WebAssembly
-
-Para mostrar cómo usar Samuel como paquete WebAssembly es mejor ver las siguientes demos:
-
-* `demo/wasm/nodejs`: Aplicación Node.js que utiliza Samuel directamente. [Ver documentación].
-* `demo/wasm/npm`: Aplicación Node.js que utiliza Samuel como paquete _npm_.
-* `demo/wasm/web`: Página web que utiliza Samuel.
+* `dohy` [README](./dohy/README.md) file.
+* `dothyphen` [README](./dothyphen/README.md) file.
+* `dothyphen-wasm` [README](./dothyphen-wasm/README.md) file.

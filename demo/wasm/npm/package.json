@@ -1,12 +1,12 @@
 {
   "name": "samuel-npm",
   "version": "1.0.0",
-  "description": "Una demo de cómo utilizar Samuel desde un paquete NPM",
+  "description": "Una demo de cómo utilizar dothyphen desde un paquete NPM",
   "scripts": {
     "start": "node index.js"
   },
   "type": "module",
   "dependencies": {
-    "@isfegu/samuel": "^0.2.0"
+    "@isfegu/dothyphen": "^0.2.0"
   }
 }

@@ -1,0 +1,16 @@
+[package]
+name = "dohy"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/isfegu/samuel"
+description = "A CLI for DotHyphen, a simple ASCII to Morse translator."
+license = "MIT"
+authors = ["isfegu"]
+readme = "README.md"
+homepage = "https://github.com/isfegu/samuel/dohy"
+keywords = ["morse"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.1.6", features = ["derive"] }
+dothyphen = { path = "../dothyphen", version = "0.1.0" }

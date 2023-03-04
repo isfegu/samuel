@@ -1,0 +1,17 @@
+[package]
+name = "dothyphen-wasm"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/isfegu/samuel"
+description = "A WebAssembly wrapper of DotHyphen, a simple ASCII to Morse translator."
+license = "MIT"
+authors = ["isfegu"]
+readme = "README.md"
+homepage = "https://github.com/isfegu/samuel/dothyphen-wasm"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.84"
+dothyphen = { path = "../dothyphen", version = "0.1.0" }

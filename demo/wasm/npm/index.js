@@ -1,3 +1,3 @@
-import * as samuel from "@isfegu/samuel";
+import * as dothyphen from "@isfegu/dothyphen-wasm";
 
-console.log(samuel.translate("Hello World"));
+console.log(dothyphen.translate("Hello World"));

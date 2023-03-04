@@ -1,19 +1,19 @@
-# Demo WebAssembly > Node.js
+# WebAssembly > Web Demo
 
-Esta es una demo de cómo usar Samuel desde una página web.
+This is a demo to learn how to use `dothyphen_wasm` from a Web page.
 
-## Requisitos
+## Requirements
 
-* Python: Para poder ejecutar un servidor web ligero en el que servir la página web. Pero se puede usar cualquier otra forma de servir esa página.
+Something to run a web server, like Python.
 
-## Uso
+## Usage
 
-Primero deben copiarse los archivos `output/wasm/web/samuel.js` y `output/wasm/web/samuel_bg.wasm` en el directorio `demo/wasm/web/lib`.
+First copy `dothyphen-wasm/output/wasm/web/dothyphen_wasm.js` and `dothyphen-wasm/output/wasm/web/dothyphen_wasm_bg.wasm` files into `demo/wasm/web/lib` directory.
 
-Una vez copiados, ejecutar:
+Then, execute:
 
 ```bash
 demo/wasm/web ~ python3 -m http.server
 ```
 
-Abrir en el navegador la URL: [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
+And open [http://0.0.0.0:8000/](http://0.0.0.0:8000/) in a Browser.

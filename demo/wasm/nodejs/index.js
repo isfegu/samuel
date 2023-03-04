@@ -1,3 +1,3 @@
-import { translate } from '../../../output/wasm/nodejs/samuel.js';
+import { translate } from '../../../dothyphen-wasm/output/wasm/nodejs/dothyphen_wasm.js';
 
 console.log(translate("Hello World"));

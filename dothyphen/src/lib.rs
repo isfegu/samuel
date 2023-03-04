@@ -3,7 +3,6 @@
 //! Provides a way to translate an ASCII input to their Morse code representation.
 use lazy_static::lazy_static;
 use std::collections::HashMap;
-use wasm_bindgen::prelude::*;
 
 lazy_static! {
     static ref MORSE_TABLE: HashMap<&'static char, &'static str> = {
@@ -53,7 +52,6 @@ lazy_static! {
 ///
 /// Only ASCII characters will be translated. Non ASCII characters will be skipped.
 /// Each letter will be separated by _spaces_ and words will be separated by _/_ character.
-#[wasm_bindgen]
 pub fn translate(input: &str) -> String {
     let mut translated_string: String = "".to_string();
 
@@ -82,8 +80,8 @@ fn get_valid_character(character: &char) -> Option<char> {
 }
 
 #[cfg(test)]
-mod tests {
-    use crate::morse::translate;
+mod dothyphen_tests {
+    use crate::translate;
 
     #[test]
     fn nonascii_is_not_tranlated() {

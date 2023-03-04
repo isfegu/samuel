@@ -1,14 +1,8 @@
-# Demo WebAssembly > Node.js
+# WebAssembly > Node.js Demo
 
-Esta es una demo de cómo usar Samuel desde una aplicación Node.js.
+This is a demo to learn how to use `dothyphen_wasm` from a Node.js application.
 
-## Requisitos
-
-* Node.js
-
-## Uso
-
-Ejecutar:
+## Usage
 
 ```bash
 demo/wasm/nodejs ~ node index.js

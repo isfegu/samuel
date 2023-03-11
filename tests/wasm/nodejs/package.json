@@ -1,0 +1,12 @@
+{
+  "name": "dothyphen-wasm-nodejs-test",
+  "version": "1.0.0",
+  "description": "DotHyphen used from Nodejs (Integration tests)",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}

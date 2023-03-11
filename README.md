@@ -35,7 +35,7 @@ Moreover, you can find several demos to show how to use Samuel.
 * Use [Conventional Commits](https://www.conventionalcommits.org).
 * Use [Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) creating a _pull request_ to _main_.
 * Use [Semantic Versioning](https://semver.org/).
-* Add unit testing whenever possible.
+* Add unit and integration testing whenever possible.
 
 ### Unit testing
 
@@ -44,6 +44,18 @@ To execute the _Workspace_ unit tests, run:
 ```bash
 ~ cargo test
 ```
+
+Unit tests will be executed automatically on a _pull request_ against _main_. See [`ci.yml`](./.github/workflows/ci.yml).
+
+### Integration testing
+
+Use integration testing to validate how Samuel works on supported targets/platforms/languages.
+
+* Add the tests in the `tests` directory.
+* Use subdirectories to group tests by target/platform/language.
+* Use [`Makefile`](./Makefile) file to run the tests.
+
+Integration tests will be executed automatically on a _pull request_ against _main_. See [`ci.yml`](./.github/workflows/ci.yml).
 
 ## Usage
 

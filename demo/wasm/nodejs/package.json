@@ -1,6 +1,6 @@
 {
   "name": "samuel-node",
   "version": "1.0.0",
-  "description": "Una demo de cómo utilizar Samuel desde node.js",
+  "description": "This is a demo to learn how to use `dothyphen_wasm` from a Node.js application.",
   "type": "module"
 }

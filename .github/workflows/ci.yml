@@ -51,7 +51,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         args: --no-deps
 
-  test:
+  unit:
     name: Execute all unit tests
     runs-on: ubuntu-latest
     steps:
@@ -64,3 +64,19 @@ jobs:
     - uses: actions-rs/cargo@v1
       with:
         command: test
+
+  integration:
+    name: Execute all integration tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
+    - uses: jetli/wasm-pack-action@v0.4.0
+      with:
+        version: 'latest'
+    - name: Run integration tests
+      run: make test-integration

@@ -56,15 +56,11 @@ pub fn translate(input: &str) -> String {
     let mut translated_string: String = "".to_string();
 
     for character in input.chars() {
-        match get_valid_character(&character) {
-            Some(c) => match MORSE_TABLE.get(&c) {
-                Some(morse_str) => {
-                    translated_string.push(' ');
-                    translated_string.push_str(&morse_str);
-                }
-                _ => {}
-            },
-            _ => {}
+        if let Some(c) = get_valid_character(&character) {
+            if let Some(morse_str) = MORSE_TABLE.get(&c) {
+                translated_string.push(' ');
+                translated_string.push_str(morse_str);
+            }
         };
     }
     translated_string.trim().to_string()

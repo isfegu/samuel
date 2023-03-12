@@ -11,70 +11,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        toolchain: stable
-        override: true
-    - uses: actions-rs/cargo@v1
-      with:
-        command: check
+    - uses: dtolnay/rust-toolchain@stable
+    - run: cargo check --workspace
 
   fmt:
     name: Run rustfmt in check mode
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        toolchain: stable
-        override: true
-    - run: rustup component add rustfmt
-    - uses: actions-rs/cargo@v1
-      with:
-        command: fmt
-        args: --check
+    - uses: dtolnay/rust-toolchain@stable
+    - run: cargo fmt --check
 
   clippy:
     name: Checks a package to catch common mistakes and improve the Rust code
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        toolchain: stable
-        override: true
-    - uses: actions-rs/clippy-check@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        args: --no-deps
+    - uses: dtolnay/rust-toolchain@stable
+    - run: cargo clippy --no-deps
 
   unit:
     name: Execute all unit tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        toolchain: stable
-        override: true
-    - uses: actions-rs/cargo@v1
-      with:
-        command: test
+    - uses: dtolnay/rust-toolchain@stable
+    - run: cargo test
 
   integration:
     name: Execute all integration tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions-rs/toolchain@v1
-      with:
-        profile: minimal
-        toolchain: stable
-        override: true
+    - uses: dtolnay/rust-toolchain@stable
     - uses: jetli/wasm-pack-action@v0.4.0
       with:
         version: 'latest'

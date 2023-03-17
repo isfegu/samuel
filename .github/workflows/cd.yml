@@ -1,0 +1,17 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'The name of the package to publish'
+        required: true
+        type: choice
+        options:
+        - dohy
+        - dothyphen
+        - dothyphen-wasm
+      tag:
+        description: 'The tag to publish'
+        required: true
+        type: string

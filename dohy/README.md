@@ -38,4 +38,4 @@ DoHy is available from crates.io, therefore, it can be installed using cargo:
 
 ## Publish
 
-This crate follows the [official documentation](https://doc.rust-lang.org/cargo/reference/publishing.html) to be published into crates.io.
+Use the [Github Action Workflow](../.github/workflows/cd.yml) to publish `dohy` to crates.io.

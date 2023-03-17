@@ -27,4 +27,4 @@ println!("{}", translated_string); // Should print .... . .-.. .-.. --- / .-- --
 
 ## Publish
 
-This crate follows the [official documentation](https://doc.rust-lang.org/cargo/reference/publishing.html) to be published into crates.io.
+Use the [Github Action Workflow](../.github/workflows/cd.yml) to publish `dothyphen` to crates.io.

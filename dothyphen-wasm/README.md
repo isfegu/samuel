@@ -34,14 +34,4 @@ Look into the demos to see how to use DotHyphen as a WebAssembly module:
 
 The result of build `dothyphen-wasm` using `nodejs` _target_ can be published to npmjs.com.
 
-With the npmjs.com credentials correctly configured, first:
-
-```bash
-output/wasm/npm ~ npm login
-```
-
-Then:
-
-```bash
-output/wasm/npm ~ npm publish --access=public
-```
+Use the [Github Action Workflow](../.github/workflows/cd.yml) to publish `dothyphen-wasm` to npmjs.com.

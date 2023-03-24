@@ -43,6 +43,10 @@ jobs:
         version: 'latest'
     - name: Build WebAssembly npm package
       run: make build-wasm-npm 
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+        registry-url: 'https://registry.npmjs.org'
     - name: Publish package 
       run: cd dothyphen-wasm/output/wasm/npm && npm publish --access=public
       env:

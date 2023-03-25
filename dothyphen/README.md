@@ -2,21 +2,7 @@
 
 A basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
 
-## Building
-
-As many others Rust crates you must use cargo to build `DotHyphen` library.
-
-```bash
-dothyphen~ cargo build --target x86_64-unknown-linux-gnu --release
-```
-
-> Change the target if you want to build the crate to other platforms like Windows or macOS.
-> Remove --release if you want a debug version.
-> Remember, the build output will be placed in the root of the workspace. For example, `target/x86_64-unknown-linux-gnu/release/libdothyphen.rlib`
-
 ## Usage
-
-Add `dothyphen` as a dependency, then:
 
 ```rust
 use dothyphen::translate;
@@ -25,6 +11,8 @@ let translated_string = translate("Hello World");
 println!("{}", translated_string); // Should print .... . .-.. .-.. --- / .-- --- .-. .-.. -..
 ```
 
-## Publish
+## Contributing
 
-Use the [Github Action Workflow](../.github/workflows/cd.yml) to publish `dothyphen` to crates.io.
+_DotHyphen_ is a part of [Samuel](https://github.com/isfegu/samuel), a project focused on learning how to use Rust to build a crate that can be used from other languages.
+
+Please read the [contributing guidelines](https://github.com/isfegu/samuel#contributing) to contribute to _DotHyphen_. All help will be appreciated.

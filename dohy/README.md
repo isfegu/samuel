@@ -1,41 +1,23 @@
 # DoHy
 
-A CLI for DotHyphen.
-
-## Building
-
-As many others Rust crates you must use cargo to build `DotHyphen` bin.
-
-```bash
-dohy~ cargo build --target x86_64-unknown-linux-gnu --release
-```
-
-> Change the target to build the crate in other platforms like Windows or macOS.
-> Remove --release to build a debug version.
-> Remember, the build output will be placed in the root of the workspace. For example, `target/x86_64-unknown-linux-gnu/release/dohy`
+A CLI for [DotHyphen](https://crates.io/crates/dothyphen). _DotHyphen_ is a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
 
 ## Usage
 
-You can use cargo:
+From source, you can use cargo:
 
 ```bash
 dohy~ cargo run -p dothyphen -- --translate "Hello world"
 ```
 
-Or you can execute the binary built previously:
+Using the binary:
 
 ```bash
-~ ./target/x86_64-unknown-linux-gnu/release/dohy --translate "Hello world"
+~ dohy --translate "Hello world"  # Should print .... . .-.. .-.. --- / .-- --- .-. .-.. -..
 ```
 
-### Install
+## Contributing
 
-DoHy is available from crates.io, therefore, it can be installed using cargo:
+_DoHy_ is a part of [Samuel](https://github.com/isfegu/samuel), a project focused on learning how to use Rust to build a crate that can be used from other languages.
 
-```bash
-~ cargo install dohy
-```
-
-## Publish
-
-Use the [Github Action Workflow](../.github/workflows/cd.yml) to publish `dohy` to crates.io.
+Please read the [contributing guidelines](https://github.com/isfegu/samuel#contributing) to contribute to _DoHy_. All help will be appreciated.

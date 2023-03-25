@@ -1,7 +1,8 @@
 [workspace]
 
 members = [
+  "dohy",
   "dothyphen",
-  "dothyphen-wasm",
-  "dohy"
+  "dothyphen-python",
+  "dothyphen-wasm"
 ]

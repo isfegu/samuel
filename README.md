@@ -2,7 +2,10 @@
 
 A basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
 
-The main goal is to learn how to build WebAssembly packages and native libraries or modules using Rust.
+The main goal is to learn how to use Rust to build a crate that can be used from other languages. Currently Samuel can be compiled to:
+
+* WebAssembly package, to be used from Javascript/Typescript
+* Python module
 
 ## Requirements
 
@@ -11,6 +14,7 @@ The main goal is to learn how to build WebAssembly packages and native libraries
 * [Rust](https://rustup.rs/)
 * [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
 * [Node.js](https://nodejs.org)
+* [Python3](https://www.python.org)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Repository structure
@@ -19,6 +23,7 @@ This project is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/
 
 * `dohy`: A CLI for DotHyphen.
 * `dothyphen`: A simple ASCII to Morse translator.
+* `dothyphen-python`: A Python wrapper of DotHyphen.
 * `dothyphen-wasm`: A WebAssembly wrapper of DotHyphen.
 
 Moreover, you can find several demos to show how to use Samuel.
@@ -52,7 +57,7 @@ Unit tests will be executed automatically on a _pull request_ against _main_. Se
 Use integration testing to validate how Samuel works on supported targets/platforms/languages.
 
 * Add the tests in the `tests` directory.
-* Use subdirectories to group tests by target/platform/language.
+* Use subdirectories to group tests by target or platform or language.
 * Use [`Makefile`](./Makefile) file to run the tests.
 
 Integration tests will be executed automatically on a _pull request_ against _main_. See [`ci.yml`](./.github/workflows/ci.yml).
@@ -63,4 +68,5 @@ To get information about how to usage Samuel, please, read the specific document
 
 * `dohy` [README](./dohy/README.md) file.
 * `dothyphen` [README](./dothyphen/README.md) file.
+* `dothyphen-python` [README](./dothyphen-python/README.md) file.
 * `dothyphen-wasm` [README](./dothyphen-wasm/README.md) file.

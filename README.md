@@ -7,6 +7,7 @@ Currently _Samuel_ can be used from:
 * Rust as a crate
 * Javascript/Typescript as a WebAssembly package
 * Python as a Wheel package
+* C/C++ as an static lib
 
 ## Repository structure
 
@@ -14,6 +15,7 @@ _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/work
 
 * `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
 * `dohy`: A CLI for _DotHyphen_.
+* `dothyphen-c`: A C/C++ wrapper of _DotHyphen_.
 * `dothyphen-python`: A Python wrapper of _DotHyphen_.
 * `dothyphen-wasm`: A WebAssembly wrapper of _DotHyphen_.
 
@@ -21,11 +23,12 @@ Moreover, you can find other relevant directories, like:
 
 * `.github`: Github actions workflows.
 * `demo`: Dummy projects to show how to use _Samuel_
+  * `c++`: How to use _DotHyphen_ from a C++ project.
+  * `python`: How to use _DotHyphen_ from a Python project.
   * `wasm`
     * `nodejs`: How to use _DotHyphen_ from a Node.js project.
     * `npm`: How to use _DotHyphen_ as a npm module.
     * `web`: How to use _DotHyphen_ in a web page.
-  * `python`: How to use _DotHyphen_ from a Python project.
 * `docs`: Documentation files.
 * `tests`
   * `python`: Python integrations tests.
@@ -78,6 +81,7 @@ Read build information about each _Samuel_'s crates.
 
 * `dohy` [README](./docs/dohy.md) file.
 * `dothyphen` [README](./docs/dothyphen.md) file.
+* `dothyphen-c` [README](./docs/dothyphen-c.md) file.
 * `dothyphen-python` [README](./docs/dothyphen-python.md) file.
 * `dothyphen-wasm` [README](./docs/dothyphen-wasm.md) file.
 
@@ -93,5 +97,6 @@ To get information about how to usage Samuel, please, read the specific document
 
 * `dohy` [README](./dohy/README.md) file.
 * `dothyphen` [README](./dothyphen/README.md) file.
+* `dothyphen-c` [README](./dothyphen-c/README.md) file.
 * `dothyphen-python` [README](./dothyphen-python/README.md) file.
 * `dothyphen-wasm` [README](./dothyphen-wasm/README.md) file.

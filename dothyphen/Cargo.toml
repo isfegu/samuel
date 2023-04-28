@@ -11,5 +11,8 @@ homepage = "https://github.com/isfegu/samuel/dothyphen"
 keywords = ["morse"]
 categories = ["encoding"]
 
+[lib]
+crate-type = ["rlib", "cdylib"]
+
 [dependencies]
 lazy_static = "1.3.0"

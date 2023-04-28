@@ -1,0 +1,14 @@
+[package]
+name = "dothyphen-c"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "dotcyphen"
+crate-type = ["staticlib"]
+
+[dependencies]
+dothyphen = { path = "../dothyphen", version = "0.2.0" }
+
+[build-dependencies]
+cbindgen = "0.24.3"

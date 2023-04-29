@@ -13,8 +13,8 @@ Currently _Samuel_ can be used from:
 
 _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/workspaces.html), composed by four members:
 
-* `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
 * `dohy`: A CLI for _DotHyphen_.
+* `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
 * `dothyphen-c`: A C/C++ wrapper of _DotHyphen_.
 * `dothyphen-python`: A Python wrapper of _DotHyphen_.
 * `dothyphen-wasm`: A WebAssembly wrapper of _DotHyphen_.
@@ -31,6 +31,7 @@ Moreover, you can find other relevant directories, like:
     * `web`: How to use _DotHyphen_ in a web page.
 * `docs`: Documentation files.
 * `tests`
+  * `c++`: C++ integration tests.
   * `python`: Python integrations tests.
   * `wasm/nodejs`: Nodejs integrations tests.
 
@@ -45,14 +46,13 @@ Following dependencies must be installed to contributing _Samuel_:
 * [Node.js](https://nodejs.org)
 * [Python3](https://www.python.org)
 * [venv](https://docs.python.org/3/library/venv.html)
-* [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Guidelines
 
-* Use Visual Studio Code opening the [samuel.code-workspace](./samuel.code-workspace) _workspace_ and installing all recommended extensions.
+* If you use Visual Studio Code, open the [samuel.code-workspace](./samuel.code-workspace) _workspace_ and install all recommended extensions.
 * Use [Conventional Commits](https://www.conventionalcommits.org).
 * Use [Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) creating a _pull request_ to _main_.
-* Use [Semantic Versioning](https://semver.org/).
+* Use [Semantic Versioning](https://semver.org/). Each change done in any crate __MUST__ update the crate's version. Each crate have its own version number.
 * Add unit and integration testing whenever possible.
 
 ### Unit testing

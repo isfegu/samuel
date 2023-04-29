@@ -7,7 +7,7 @@ A CLI for [DotHyphen](https://crates.io/crates/dothyphen). _DotHyphen_ is a basi
 From source, you can use cargo:
 
 ```bash
-dohy~ cargo run -p dothyphen -- --translate "Hello world"
+dohy~ cargo run -- --translate "Hello world"
 ```
 
 Using the binary:

@@ -1,6 +1,6 @@
 # Samuel
 
-The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build an utility that can be used from other languages. The utility used as excuse is _DotHyphen_, a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
+The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a utility that can be used from other languages. The utility used as excuse is _DotHyphen_, a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
 
 Currently _Samuel_ can be used from:
 
@@ -8,6 +8,7 @@ Currently _Samuel_ can be used from:
 * Javascript/Typescript as a WebAssembly package
 * Python as a Wheel package
 * C/C++ as an static lib
+* <https://dothyphen.fermyon.app/> as an HTTP EndPoint
 
 ## Repository structure
 
@@ -16,6 +17,7 @@ _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/work
 * `dohy`: A CLI for _DotHyphen_.
 * `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
 * `dothyphen-c`: A C/C++ wrapper of _DotHyphen_.
+* `dothyphen-fermyon`: A rust wrapper of _DotHyphen_ to enable Fermyon Cloud deployment.
 * `dothyphen-python`: A Python wrapper of _DotHyphen_.
 * `dothyphen-wasm`: A WebAssembly wrapper of _DotHyphen_.
 
@@ -43,9 +45,11 @@ Following dependencies must be installed to contributing _Samuel_:
 
 * [Rust](https://rustup.rs/)
 * [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
+* [`wasm32-wasi` target](https://rust-lang.github.io/rustup/concepts/toolchains.html)
 * [Node.js](https://nodejs.org)
 * [Python3](https://www.python.org)
 * [venv](https://docs.python.org/3/library/venv.html)
+* [Spin](https://developer.fermyon.com/spin/install)
 
 ### Guidelines
 
@@ -81,13 +85,14 @@ Read build information about each _Samuel_'s crates.
 
 * `dohy` [README](./docs/dohy.md) file.
 * `dothyphen` [README](./docs/dothyphen.md) file.
+* `dothyphen-fermyon` [README](./docs/dothyphen-fermyon.md) file.
 * `dothyphen-c` [README](./docs/dothyphen-c.md) file.
 * `dothyphen-python` [README](./docs/dothyphen-python.md) file.
 * `dothyphen-wasm` [README](./docs/dothyphen-wasm.md) file.
 
 ## Publish
 
-As a part of the research done in _Samuel_, all the code should be published in the appropriate language packages providers, like npmjs.com or crates.io.
+As a part of the research done in _Samuel_, all the code should be published in the appropriate language packages providers, like npmjs.com, crates.io or Fermyon Cloud.
 
 Publication must be done using the [Github Action Workflow](../.github/workflows/cd.yml).
 
@@ -97,6 +102,7 @@ To get information about how to usage Samuel, please, read the specific document
 
 * `dohy` [README](./dohy/README.md) file.
 * `dothyphen` [README](./dothyphen/README.md) file.
+* `dothyphen-fermyon` [README](./dothyphen-fermyon/README.md) file.
 * `dothyphen-c` [README](./dothyphen-c/README.md) file.
 * `dothyphen-python` [README](./dothyphen-python/README.md) file.
 * `dothyphen-wasm` [README](./dothyphen-wasm/README.md) file.

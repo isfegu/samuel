@@ -19,9 +19,3 @@ int main () {
 ```
 
 Look at the [demo](../demo/c++/) to see how to use _DotCyphen_ from C++ using `gcc`.
-
-## Contributing
-
-_DotCyphen_ is a part of [Samuel](https://github.com/isfegu/samuel), a project focused on learning how to use Rust to build a crate that can be used from other languages.
-
-Please read the [contributing guidelines](https://github.com/isfegu/samuel#contributing) to contribute to _DotCyphen_. All help will be appreciated.

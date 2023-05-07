@@ -1,15 +1,16 @@
-name: Manually publish packages
+name: Manually publish members
 
 on:
   workflow_dispatch:
     inputs:
-      package:
-        description: 'The name of the package to publish'
+      member:
+        description: 'The name of the member to publish'
         required: true
         type: choice
         options:
         - dohy
         - dothyphen
+        - dothyphen-fermyon
         - dothyphen-wasm
       tag:
         description: 'The tag to publish'
@@ -18,20 +19,20 @@ on:
 
 jobs:
   crate:
-    if: inputs.package == 'dohy' || inputs.package == 'dothyphen'
-    name: Publish ${{ inputs.package }} to crates.io
+    if: inputs.member == 'dohy' || inputs.member == 'dothyphen'
+    name: Publish ${{ inputs.member }} to crates.io
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
       with:
         ref: ${{ inputs.tag }}
     - uses: dtolnay/rust-toolchain@stable
-    - run: cargo publish -p ${{ inputs.package }} --token ${CARGO_REGISTRY_TOKEN}
+    - run: cargo publish -p ${{ inputs.member }} --token ${CARGO_REGISTRY_TOKEN}
       env:
         CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
   npm:
-    if: inputs.package == 'dothyphen-wasm'
-    name: Publish ${{ inputs.package }} to npmjs.com
+    if: inputs.member == 'dothyphen-wasm'
+    name: Publish ${{ inputs.member }} to npmjs.com
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -51,3 +52,20 @@ jobs:
       run: cd dothyphen-wasm/output/wasm/npm && npm publish --access=public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+  fermyon:
+    if: inputs.member == 'dothyphen-fermyon'
+    name: Publish ${{ inputs.member }} to Fermyon Cloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-wasi
+      - uses: fermyon/actions/spin/setup@v1
+      - name: Build and deploy to Fermyon
+        uses: fermyon/actions/spin/deploy@v1
+        with:
+          manifest_file: dothyphen-fermyon/spin.toml
+          fermyon_token: ${{ secrets.FERMYON_CLOUD_TOKEN }}

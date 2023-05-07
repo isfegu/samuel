@@ -1,0 +1,16 @@
+spin_manifest_version = "1"
+authors = ["isfegu"]
+description = "A Fermyon WebAssembly wrapper around DotHyphen, a simple ASCII to Morse translator"
+name = "dothyphen-fermyon"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "dothyphen-fermyon"
+source = "../target/wasm32-wasi/release/dothyphen_fermyon.wasm"
+allowed_http_hosts = []
+[component.trigger]
+route = "/translate"
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
+watch = ["src/**/*.rs", "Cargo.toml"]

@@ -3,7 +3,7 @@ authors = ["isfegu"]
 description = "A Fermyon WebAssembly wrapper around DotHyphen, a simple ASCII to Morse translator"
 name = "dothyphen-fermyon"
 trigger = { type = "http", base = "/" }
-version = "0.1.0"
+version = "0.1.1"
 
 [[component]]
 id = "dothyphen-fermyon"

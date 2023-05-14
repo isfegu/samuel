@@ -67,6 +67,8 @@ Now, the _wheel_ package can be installed, globally or in any Python virtual env
 pip3 install ../../dothyphen-python/output/wheels/dothyphen_python-0.1.0-cp38-abi3-linux_x86_64.whl
 ```
 
+> Depending on the architecture on which the package is built, the name of the wheel package may be different.
+
 ## Testing
 
 To execute the crate unit tests, run:

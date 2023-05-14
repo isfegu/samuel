@@ -2,6 +2,8 @@
 
 A WebAssembly wrapper of _DotHyphen_.
 
+> Info: When `dothyphen-wasm` is published as Node.js module, it uses the name `@isfegu/dothyphen-wasm`
+
 ## Building
 
 Due to this crate uses wasm-bindgen, this crate must be built using wasm-pack. [Read the official documentation](https://rustwasm.github.io/wasm-pack/book/commands/build.html) to get more information about building process.

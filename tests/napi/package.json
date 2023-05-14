@@ -1,7 +1,7 @@
 {
-  "name": "dothyphen-wasm-nodejs-test",
+  "name": "dothyphen-napi-test",
   "version": "1.0.0",
-  "description": "DotHyphen used from Nodejs as WebAssembly module (Integration tests)",
+  "description": "DotHyphen used from Nodejs as native module (Integration tests)",
   "license": "MIT",
   "scripts": {
     "test": "jest"

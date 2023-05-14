@@ -1,5 +1,5 @@
 {
-  "name": "samuel-node",
+  "name": "dothyphen-wasm-node",
   "version": "1.0.0",
   "description": "This is a demo to learn how to use `dothyphen_wasm` from a Node.js application.",
   "type": "module"

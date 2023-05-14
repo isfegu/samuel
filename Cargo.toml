@@ -5,6 +5,7 @@ members = [
   "dothyphen",
   "dothyphen-c",
   "dothyphen-fermyon",
+  "dothyphen-napi",
   "dothyphen-python",
   "dothyphen-wasm"
 ]

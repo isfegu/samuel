@@ -1,0 +1,31 @@
+{
+  "name": "@isfegu/dothyphen-napi-android-arm64",
+  "collaborators": [
+    "isfegu"
+  ],
+  "description": "This is the **aarch64-linux-android** binary for `dothyphen-napi`",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isfegu/samuel"
+  },
+  "homepage": "https://github.com/isfegu/samuel/dothyphen-napi",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "dothyphen-napi.android-arm64.node",
+  "files": [
+    "dothyphen-napi.android-arm64.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}

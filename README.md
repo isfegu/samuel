@@ -5,7 +5,9 @@ The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a
 Currently _Samuel_ can be used from:
 
 * Rust as a crate
-* Javascript/Typescript as a WebAssembly package
+* Javascript/Typescript as a
+  * WebAssembly Node.js module
+  * Native Node.js module
 * Python as a Wheel package
 * C/C++ as an static lib
 * <https://dothyphen.fermyon.app/> as an HTTP EndPoint
@@ -18,6 +20,7 @@ _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/work
 * `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
 * `dothyphen-c`: A C/C++ wrapper of _DotHyphen_.
 * `dothyphen-fermyon`: A rust wrapper of _DotHyphen_ to enable Fermyon Cloud deployment.
+* `dothyphen-napi`: A native Node.js module of _DotHyphen_.
 * `dothyphen-python`: A Python wrapper of _DotHyphen_.
 * `dothyphen-wasm`: A WebAssembly wrapper of _DotHyphen_.
 
@@ -26,16 +29,18 @@ Moreover, you can find other relevant directories, like:
 * `.github`: Github actions workflows.
 * `demo`: Dummy projects to show how to use _Samuel_
   * `c++`: How to use _DotHyphen_ from a C++ project.
+  * `napi`: How to use _DotHyphen_ from a Node.js project using a native Node.js module.
   * `python`: How to use _DotHyphen_ from a Python project.
   * `wasm`
     * `nodejs`: How to use _DotHyphen_ from a Node.js project.
-    * `npm`: How to use _DotHyphen_ as a npm module.
+    * `npm`: How to use _DotHyphen_ from a Node.js project using a WebAssembly Node.js module.
     * `web`: How to use _DotHyphen_ in a web page.
 * `docs`: Documentation files.
 * `tests`
   * `c++`: C++ integration tests.
+  * `napi`: Node.js native module integration tests.
   * `python`: Python integrations tests.
-  * `wasm/nodejs`: Nodejs integrations tests.
+  * `wasm/nodejs`: Node.js WebAssembly module integrations tests.
 
 ## Contributing
 
@@ -47,6 +52,7 @@ Following dependencies must be installed to contributing _Samuel_:
 * [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
 * [`wasm32-wasi` target](https://rust-lang.github.io/rustup/concepts/toolchains.html)
 * [Node.js](https://nodejs.org)
+* [Yarm](https://yarnpkg.com/) or Npm (already installed with Node.js)
 * [Python3](https://www.python.org)
 * [venv](https://docs.python.org/3/library/venv.html)
 * [Spin](https://developer.fermyon.com/spin/install)
@@ -92,7 +98,7 @@ Read build information about each _Samuel_'s crates.
 
 ## Publish
 
-As a part of the research done in _Samuel_, all the code should be published in the appropriate language packages providers, like npmjs.com, crates.io or Fermyon Cloud.
+As a part of the research done in _Samuel_, all the code should be published in the appropriate language packages or cloud providers, like npmjs.com, crates.io or Fermyon Cloud.
 
 Publication must be done using the [Github Action Workflow](../.github/workflows/cd.yml).
 

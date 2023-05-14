@@ -22,6 +22,8 @@ Install `dothyphen_python` running:
 (venv) demo/python~ pip3 install ../../dothyphen-python/output/wheels/dothyphen_python-0.2.0-cp38-abi3-linux_x86_64.whl
 ```
 
+> Depending on the architecture on which the package is built, the name of the wheel package may be different.
+
 Execute the demo, running:
 
 ```bash

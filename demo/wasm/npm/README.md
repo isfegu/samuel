@@ -7,7 +7,7 @@ This is a demo to learn how to use `dothyphen_wasm` from a Node.js application u
 First, install the dependencies:
 
 ```bash
-demo/wasm/nodejs ~ yarn // Or npm install
+demo/wasm/nodejs ~ yarn # or npm install
 ```
 
 Then, run:

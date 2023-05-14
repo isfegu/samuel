@@ -1,5 +1,5 @@
 {
-  "name": "samuel-npm",
+  "name": "dothyphen-wasm-npm",
   "version": "1.0.0",
   "description": "This is a demo to learn how to use `dothyphen_wasm` from a Node.js application using a Npm package.",
   "scripts": {
@@ -7,6 +7,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@isfegu/dothyphen": "^0.2.0"
+    "@isfegu/dothyphen-wasm": "^0.2.0"
   }
 }

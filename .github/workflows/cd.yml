@@ -51,7 +51,7 @@ jobs:
     - name: Publish package 
       run: cd dothyphen-wasm/output/wasm/npm && npm publish --access=public
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
   fermyon:
     if: inputs.member == 'dothyphen-fermyon'
     name: Publish ${{ inputs.member }} to Fermyon Cloud

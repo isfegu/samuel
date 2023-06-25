@@ -1,7 +1,12 @@
-test-integration: test-integration-wasm-nodejs test-integration-python test-integration-c
+test-integration: test-integration-c test-integration-napi test-integration-python test-integration-wasm-nodejs
 
-test-integration-wasm-nodejs: build-wasm-npm
-	cd tests/wasm/nodejs; \
+test-integration-c: build-c-staticlib
+	cd tests/c++; \
+	make test; \
+	./tests
+
+test-integration-napi: build-napi-module
+	cd tests/napi; \
 	yarn; \
 	yarn test
 
@@ -13,15 +18,20 @@ test-integration-python: build-python-wheel
 	python3 -m unittest -v tests.test_dotpyphen; \
 	deactivate
 
-test-integration-c: build-c-staticlib
-	cd tests/c++; \
-	make test; \
-	./tests
+test-integration-wasm-nodejs: build-wasm-npm
+	cd tests/wasm/nodejs; \
+	yarn; \
+	yarn test
 
-build-wasm-npm:
-	cd dothyphen-wasm; \
-	wasm-pack build --release --target nodejs --scope isfegu --out-dir output/wasm/npm; \
+build-c-staticlib:
+	cd dothyphen-c; \
+	cargo build; \
 	cd ..
+
+ build-napi-module:
+	cd dothyphen-napi; \
+	yarn; \
+	yarn build
 
 build-python-wheel:
 	cd dothyphen-python; \
@@ -32,7 +42,8 @@ build-python-wheel:
 	deactivate; \
 	cd ..
 
-build-c-staticlib:
-	cd dothyphen-c; \
-	cargo build; \
+build-wasm-npm:
+	cd dothyphen-wasm; \
+	wasm-pack build --release --target nodejs --scope isfegu --out-dir output/wasm/npm; \
 	cd ..
+

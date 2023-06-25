@@ -1,0 +1,12 @@
+{
+  "name": "dothyphen-napi",
+  "version": "1.0.0",
+  "description": "This is a demo to learn how to use `dothyphen_napi` from a Node.js application.",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@isfegu/dothyphen-napi": "^0.1.0"
+  }
+}

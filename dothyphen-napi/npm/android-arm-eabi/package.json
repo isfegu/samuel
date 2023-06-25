@@ -1,0 +1,31 @@
+{
+  "name": "@isfegu/dothyphen-napi-android-arm-eabi",
+  "collaborators": [
+    "isfegu"
+  ],
+  "description": "This is the **armv7-linux-androideabi** binary for `dothyphen-napi`",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isfegu/samuel"
+  },
+  "homepage": "https://github.com/isfegu/samuel/dothyphen-napi",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "main": "dothyphen-napi.android-arm-eabi.node",
+  "files": [
+    "dothyphen-napi.android-arm-eabi.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}

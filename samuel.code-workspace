@@ -8,5 +8,11 @@
 		"recommendations": [
 			"rust-lang.rust-analyzer"
 		]
+	},
+	"settings": {
+		"rust-analyzer.linkedProjects": [
+			"./dothyphen-shuttle/Cargo.toml",
+			"./dothyphen-fermyon/Cargo.toml"
+		]
 	}
 }

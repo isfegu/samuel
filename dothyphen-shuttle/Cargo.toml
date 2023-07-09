@@ -1,0 +1,17 @@
+[package]
+name = "dothyphen-shuttle"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/isfegu/samuel"
+description = "A Shuttle wrapper around DotHyphen, a simple ASCII to Morse translator"
+license = "MIT"
+authors = ["isfegu"]
+homepage = "https://github.com/isfegu/samuel/dothyphen-shuttle"
+
+[dependencies]
+actix-web = "4.3.1"
+dothyphen = "0.2.0"
+serde = { version = "1.0", features = ["derive"] }
+shuttle-actix-web = "0.24.0"
+shuttle-runtime = "0.24.0"
+tokio = "1.28.2"

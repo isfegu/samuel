@@ -12,6 +12,7 @@ on:
         - dothyphen
         - dothyphen-fermyon
         - dothyphen-napi
+        - dothyphen-shuttle
         - dothyphen-wasm
       tag:
         description: 'The tag to publish'
@@ -31,6 +32,28 @@ jobs:
     - run: cargo publish -p ${{ inputs.member }} --token ${CARGO_REGISTRY_TOKEN}
       env:
         CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+  fermyon:
+    if: inputs.member == 'dothyphen-fermyon'
+    name: Publish ${{ inputs.member }} to Fermyon Cloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-wasi
+      - uses: fermyon/actions/spin/setup@v1
+      - name: Build and deploy to Fermyon
+        uses: fermyon/actions/spin/deploy@v1
+        with:
+          manifest_file: dothyphen-fermyon/spin.toml
+          fermyon_token: ${{ secrets.FERMYON_CLOUD_TOKEN }}
+  npm-napi:
+    if: inputs.member == 'dothyphen-napi'
+    uses: ./.github/workflows/napi.yml
+    secrets:
+      NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
   npm-wasm:
     if: inputs.member == 'dothyphen-wasm'
     name: Publish ${{ inputs.member }} to npmjs.com
@@ -53,25 +76,15 @@ jobs:
       run: cd dothyphen-wasm/output/wasm/npm && npm publish --access=public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
-  npm-napi:
-    if: inputs.member == 'dothyphen-napi'
-    uses: ./.github/workflows/napi.yml
-    secrets:
-      NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
-  fermyon:
-    if: inputs.member == 'dothyphen-fermyon'
-    name: Publish ${{ inputs.member }} to Fermyon Cloud
+  shuttle:
+    if: inputs.member == 'dothyphen-shuttle'
+    name: Publish ${{ inputs.member }} to shuttle.rs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ inputs.tag }}
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: wasm32-wasi
-      - uses: fermyon/actions/spin/setup@v1
-      - name: Build and deploy to Fermyon
-        uses: fermyon/actions/spin/deploy@v1
-        with:
-          manifest_file: dothyphen-fermyon/spin.toml
-          fermyon_token: ${{ secrets.FERMYON_CLOUD_TOKEN }}
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ inputs.tag }}
+    - uses: dtolnay/rust-toolchain@stable
+    - uses: shuttle-hq/deploy-action@main
+      with:
+        deploy-key: ${{ secrets.SHUTTLE_TOKEN }}

@@ -11,6 +11,7 @@ Currently _Samuel_ can be used from:
 * Python as a Wheel package
 * C/C++ as an static lib
 * <https://dothyphen.fermyon.app/> as an HTTP EndPoint
+* <https://dothyphen.shuttleapp.rs> as an HTTP EndPoint
 
 ## Repository structure
 
@@ -22,6 +23,7 @@ _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/work
 * `dothyphen-fermyon`: A rust wrapper of _DotHyphen_ to enable Fermyon Cloud deployment.
 * `dothyphen-napi`: A native Node.js module of _DotHyphen_.
 * `dothyphen-python`: A Python wrapper of _DotHyphen_.
+* `dothyphen-shuttle`: A rust wrapper of _DotHyphen_ to enable Shuttle Cloud deployment.
 * `dothyphen-wasm`: A WebAssembly wrapper of _DotHyphen_.
 
 Moreover, you can find other relevant directories, like:
@@ -56,6 +58,7 @@ Following dependencies must be installed to contributing _Samuel_:
 * [Python3](https://www.python.org)
 * [venv](https://docs.python.org/3/library/venv.html)
 * [Spin](https://developer.fermyon.com/spin/install)
+* [Shuttle](https://docs.shuttle.rs/introduction/installation)
 
 ### Guidelines
 
@@ -91,14 +94,16 @@ Read build information about each _Samuel_'s crates.
 
 * `dohy` [README](./docs/dohy.md) file.
 * `dothyphen` [README](./docs/dothyphen.md) file.
-* `dothyphen-fermyon` [README](./docs/dothyphen-fermyon.md) file.
 * `dothyphen-c` [README](./docs/dothyphen-c.md) file.
+* `dothyphen-fermyon` [README](./docs/dothyphen-fermyon.md) file.
+* `dothyphen-napi` [README](./docs/dothyphen-napi.md) file.
 * `dothyphen-python` [README](./docs/dothyphen-python.md) file.
+* `dothyphen-shuttle` [README](./docs/dothyphen-shuttle.md) file.
 * `dothyphen-wasm` [README](./docs/dothyphen-wasm.md) file.
 
 ## Publish
 
-As a part of the research done in _Samuel_, all the code should be published in the appropriate language packages or cloud providers, like npmjs.com, crates.io or Fermyon Cloud.
+As a part of the research done in _Samuel_, all the code should be published in the appropriate language packages or cloud providers, like npmjs.com, crates.io, Fermyon Cloud or Shuttle Cloud.
 
 Publication must be done using the [Github Action Workflow](../.github/workflows/cd.yml).
 
@@ -108,7 +113,9 @@ To get information about how to usage Samuel, please, read the specific document
 
 * `dohy` [README](./dohy/README.md) file.
 * `dothyphen` [README](./dothyphen/README.md) file.
-* `dothyphen-fermyon` [README](./dothyphen-fermyon/README.md) file.
 * `dothyphen-c` [README](./dothyphen-c/README.md) file.
+* `dothyphen-fermyon` [README](./dothyphen-fermyon/README.md) file.
+* `dothyphen-napi` [README](./dothyphen-napi/README.md) file.
 * `dothyphen-python` [README](./dothyphen-python/README.md) file.
+* `dothyphen-shuttle` [README](./dothyphen-shuttle/README.md) file.
 * `dothyphen-wasm` [README](./dothyphen-wasm/README.md) file.

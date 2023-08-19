@@ -1,6 +1,11 @@
-# DotHyphen
+# Contributing
 
-A simple ASCII to Morse translator and the core of Samuel project.
+_DotHyphen_ is a part of [Samuel](https://github.com/isfegu/samuel), to contribute:
+
+1. Read the [Samuel documentation](https://github.com/isfegu/samuel/blob/main/README.md).
+2. Download the [Samuel repository](https://github.com/isfegu/samuel).
+3. Install the [Samuel requirements](https://github.com/isfegu/samuel/blob/main/README.md#requirements).
+4. Follow the [Samuel contributing guidelines](https://github.com/isfegu/samuel/blob/main/README.md#guidelines).
 
 ## Building
 
@@ -16,10 +21,6 @@ dothyphen~ cargo build --target x86_64-unknown-linux-gnu --release
 
 Read the [official documentation](https://doc.rust-lang.org/cargo/commands/cargo-build.html) to learn more about how to build a crate with cargo.
 
-## Testing
+## Publishing
 
-To execute the crate unit tests, run:
-
-```bash
-dothyphen~ cargo test
-```
+Read the `dothyphen` [RELEASE](./RELEASE.md) file.

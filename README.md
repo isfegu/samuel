@@ -1,21 +1,21 @@
 # Samuel
 
-The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a utility that can be used from other languages. The utility used as excuse is _DotHyphen_, a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
+The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a utility that can be used from other languages and multiple environments. The utility used as excuse is _DotHyphen_, a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
 
 Currently _Samuel_ can be used from:
 
-* Rust as a crate
-* Javascript/Typescript as a
+* __Rust__ as a crate
+* __Javascript/Typescript__ as a
   * WebAssembly Node.js module
   * Native Node.js module
-* Python as a Wheel package
-* C/C++ as an static lib
+* __Python__ as a Wheel package
+* __C/C++__ as an static lib
 * <https://dothyphen.fermyon.app/> as an HTTP EndPoint
-* <https://dothyphen.shuttleapp.rs> as an HTTP EndPoint
+* <https://dothyphen-shuttle.shuttleapp.rs> as an HTTP EndPoint
 
 ## Repository structure
 
-_Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/workspaces.html), composed by four members:
+_Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/workspaces.html), composed by the following members:
 
 * `dohy`: A CLI for _DotHyphen_.
 * `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
@@ -29,7 +29,7 @@ _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/work
 Moreover, you can find other relevant directories, like:
 
 * `.github`: Github actions workflows.
-* `demo`: Dummy projects to show how to use _Samuel_
+* `demo`: Dummy projects to show how to use _Samuel_.
   * `c++`: How to use _DotHyphen_ from a C++ project.
   * `napi`: How to use _DotHyphen_ from a Node.js project using a native Node.js module.
   * `python`: How to use _DotHyphen_ from a Python project.
@@ -37,7 +37,6 @@ Moreover, you can find other relevant directories, like:
     * `nodejs`: How to use _DotHyphen_ from a Node.js project.
     * `npm`: How to use _DotHyphen_ from a Node.js project using a WebAssembly Node.js module.
     * `web`: How to use _DotHyphen_ in a web page.
-* `docs`: Documentation files.
 * `tests`
   * `c++`: C++ integration tests.
   * `napi`: Node.js native module integration tests.
@@ -46,19 +45,64 @@ Moreover, you can find other relevant directories, like:
 
 ## Contributing
 
+To get information about how to contribute to _Samuel_, please, read the specific documentation of each Cargo's Workspace member:
+
+* `dohy` [CONTRIBUTING](./dohy/CONTRIBUTING.md) file.
+* `dothyphen` [CONTRIBUTING](./dothyphen/CONTRIBUTING.md) file.
+* `dothyphen-c` [CONTRIBUTING](./dothyphen-c/CONTRIBUTING.md) file.
+* `dothyphen-fermyon` [CONTRIBUTING](./dothyphen-fermyon/CONTRIBUTING.md) file.
+* `dothyphen-napi` [CONTRIBUTING](./dothyphen-napi/CONTRIBUTING.md) file.
+* `dothyphen-python` [CONTRIBUTING](./dothyphen-python/CONTRIBUTING.md) file.
+* `dothyphen-shuttle` [CONTRIBUTING](./dothyphen-shuttle/CONTRIBUTING.md) file.
+* `dothyphen-wasm` [CONTRIBUTING](./dothyphen-wasm/CONTRIBUTING.md) file.
+
+Moreover, you can use the _Samuel_ [Github Discussions](https://github.com/isfegu/samuel/discussions).
+
 ### Requirements
 
-Following dependencies must be installed to contributing _Samuel_:
+The following requirements must be installed to contribute to each _Samuel_ Cargo's Workspace member:
 
-* [Rust](https://rustup.rs/)
-* [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
-* [`wasm32-wasi` target](https://rust-lang.github.io/rustup/concepts/toolchains.html)
-* [Node.js](https://nodejs.org)
-* [Yarm](https://yarnpkg.com/) or Npm (already installed with Node.js)
-* [Python3](https://www.python.org)
-* [venv](https://docs.python.org/3/library/venv.html)
-* [Spin](https://developer.fermyon.com/spin/install)
-* [Shuttle](https://docs.shuttle.rs/introduction/installation)
+#### Common
+
+* Last stable Rust toolchain. Use [Rustup](https://rustup.rs/) to install it.
+
+#### dothyphen-c
+
+* [gcc](https://gcc.gnu.org/) or some C compiler.
+
+#### dothyphen-fermyon
+
+* The [Spin](https://developer.fermyon.com/spin) CLI.
+* [`wasm32-wasi` target](https://rust-lang.github.io/rustup/concepts/toolchains.html).
+
+Read the [official documentation](https://developer.fermyon.com/spin/install) to install Spin CLI.
+
+> Info: In this documentation we assume Spin is installed inside `dothyphen-fermyon` directory.
+
+#### dothyphen-napi
+
+* [Node.js](https://nodejs.org).
+* [Yarm](https://yarnpkg.com/) or Npm (already installed with Node.js).
+
+#### dothyphen-python
+
+* [Python3](https://www.python.org).
+* [venv](https://docs.python.org/3/library/venv.html).
+
+#### dothyphen-shuttle
+
+* The [Shuttle](https://docs.shuttle.rs) CLI.
+
+Read the [official documentation](https://docs.shuttle.rs/introduction/installation) to install Shuttle CLI.
+
+> Info: In this documentation we assume Shuttle CLI is installed globally.
+
+#### dothyphen-wasm
+
+* [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/).
+* [`wasm32-wasi` target](https://rust-lang.github.io/rustup/concepts/toolchains.html).
+* [Node.js](https://nodejs.org).
+* [Yarm](https://yarnpkg.com/) or Npm (already installed with Node.js).
 
 ### Guidelines
 
@@ -88,28 +132,23 @@ Use integration testing to validate if _Samuel_ works on supported targets or pl
 
 Integration tests will be executed automatically on a _pull request_ against _main_. See [`ci.yml`](./.github/workflows/ci.yml).
 
-### Build
-
-Read build information about each _Samuel_'s crates.
-
-* `dohy` [README](./docs/dohy.md) file.
-* `dothyphen` [README](./docs/dothyphen.md) file.
-* `dothyphen-c` [README](./docs/dothyphen-c.md) file.
-* `dothyphen-fermyon` [README](./docs/dothyphen-fermyon.md) file.
-* `dothyphen-napi` [README](./docs/dothyphen-napi.md) file.
-* `dothyphen-python` [README](./docs/dothyphen-python.md) file.
-* `dothyphen-shuttle` [README](./docs/dothyphen-shuttle.md) file.
-* `dothyphen-wasm` [README](./docs/dothyphen-wasm.md) file.
-
-## Publish
+### Publish
 
 As a part of the research done in _Samuel_, all the code should be published in the appropriate language packages or cloud providers, like npmjs.com, crates.io, Fermyon Cloud or Shuttle Cloud.
 
 Publication must be done using the [Github Action Workflow](../.github/workflows/cd.yml).
 
+#### Versioning and Tags
+
+All code updates of any Cargo's Workspace member must have a version number. This number can be different between members. Each version must be associated with a git tag therefore this tags will be used to publishing. These tags must be placed in the right commit and must be named using this pattern, `vX.Y.Z-<member>`, for example:
+
+* `v0.1.0-dothyphen`
+* `v0.1.1-dothyphen-c`
+* `v0.2.0-dohy`
+
 ## Usage
 
-To get information about how to usage Samuel, please, read the specific documentation of each crate:
+To get information about how to usage _Samuel_, please, read the specific documentation of each _Samuel_ Cargo's Workspace member:
 
 * `dohy` [README](./dohy/README.md) file.
 * `dothyphen` [README](./dothyphen/README.md) file.

@@ -66,6 +66,6 @@ fn handle_dothyphen_fermyon(req: Request) -> Result<Response> {
     let response = json!({ "output": translated_string });
 
     Ok(http::Response::builder()
-        .status(200)
+        .status(StatusCode::OK)
         .body(Some(response.to_string().into()))?)
 }

@@ -1,10 +1,15 @@
-# DotHyphen Python
+# Contributing
 
-A Python wrapper of _DotHyphen_.
+_DotPyphen_ is a part of [Samuel](https://github.com/isfegu/samuel), to contribute:
+
+1. Read the [Samuel documentation](https://github.com/isfegu/samuel/blob/main/README.md).
+2. Download the [Samuel repository](https://github.com/isfegu/samuel).
+3. Install the [Samuel requirements](https://github.com/isfegu/samuel/blob/main/README.md#requirements).
+4. Follow the [Samuel contributing guidelines](https://github.com/isfegu/samuel/blob/main/README.md#guidelines).
+
+## Building
 
 > Info: The python module name for `dothyphen-python` is `dotpyphen`.
-
-## Environment
 
 To build `dothyphen-python` a python virtual environment, [venv](https://docs.python.org/3/library/venv.html), is needed.
 
@@ -31,8 +36,6 @@ To close the python virtual environment, run:
 ```bash
 (venv) dothyphen-python~ deactivate
 ```
-
-## Building
 
 Due to this crate uses [PyO3](https://pyo3.rs/) to make the bindings, this crate must be built using maturin. [Read the official documentation](https://www.maturin.rs/) to get more information about building process.
 
@@ -69,10 +72,6 @@ pip3 install ../../dothyphen-python/output/wheels/dothyphen_python-0.1.0-cp38-ab
 
 > Depending on the architecture on which the package is built, the name of the wheel package may be different.
 
-## Testing
+## Publishing
 
-To execute the crate unit tests, run:
-
-```bash
-dothyphen-python~ cargo test
-```
+`dothyphen-python` it is not published anywhere, yet.

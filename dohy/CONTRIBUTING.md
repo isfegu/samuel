@@ -1,6 +1,11 @@
-# DoHy
+# Contributing
 
-A CLI for _DotHyphen_.
+_DoHy_ is a part of [Samuel](https://github.com/isfegu/samuel), to contribute:
+
+1. Read the [Samuel documentation](https://github.com/isfegu/samuel/blob/main/README.md).
+2. Download the [Samuel repository](https://github.com/isfegu/samuel).
+3. Install the [Samuel requirements](https://github.com/isfegu/samuel/blob/main/README.md#requirements).
+4. Follow the [Samuel contributing guidelines](https://github.com/isfegu/samuel/blob/main/README.md#guidelines).
 
 ## Building
 
@@ -15,3 +20,7 @@ dohy~ cargo build --target x86_64-unknown-linux-gnu --release
 > Remember, the build output will be placed in the root of the workspace. For example, `target/x86_64-unknown-linux-gnu/release/libdothyphen.rlib`
 
 Read the [official documentation](https://doc.rust-lang.org/cargo/commands/cargo-build.html) to learn more about how to build a crate with cargo.
+
+## Publishing
+
+Read the `dohy` [RELEASE](./RELEASE.md) file.

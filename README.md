@@ -4,14 +4,15 @@ The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a
 
 Currently _Samuel_ can be used from:
 
-* __Rust__ as a crate
-* __Javascript/Typescript__ as a
-  * WebAssembly Node.js module
-  * Native Node.js module
-* __Python__ as a Wheel package
-* __C/C++__ as an static lib
-* <https://dothyphen.fermyon.app/> as an HTTP EndPoint
-* <https://dothyphen-shuttle.shuttleapp.rs> as an HTTP EndPoint
+* __Rust__ as a crate.
+* __Javascript/Typescript__ as a:
+  * WebAssembly Node.js module.
+  * Native Node.js module.
+* __Python__ as a Wheel package.
+* __C/C++__ as an static lib.
+* __Java__ as a dynamic lib called using JNI and jar package.
+* <https://dothyphen.fermyon.app/> as an HTTP EndPoint.
+* <https://dothyphen-shuttle.shuttleapp.rs> as an HTTP EndPoint.
 
 ## Repository structure
 
@@ -21,6 +22,7 @@ _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/work
 * `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
 * `dothyphen-c`: A C/C++ wrapper of _DotHyphen_.
 * `dothyphen-fermyon`: A rust wrapper of _DotHyphen_ to enable Fermyon Cloud deployment.
+* `dothyphen-java`: A Java wrapper of _DotHyphen_.
 * `dothyphen-napi`: A native Node.js module of _DotHyphen_.
 * `dothyphen-python`: A Python wrapper of _DotHyphen_.
 * `dothyphen-shuttle`: A rust wrapper of _DotHyphen_ to enable Shuttle Cloud deployment.
@@ -31,6 +33,7 @@ Moreover, you can find other relevant directories, like:
 * `.github`: Github actions workflows.
 * `demo`: Dummy projects to show how to use _Samuel_.
   * `c++`: How to use _DotHyphen_ from a C++ project.
+  * `java`: How to use _DotHyphen_ from a Java project.
   * `napi`: How to use _DotHyphen_ from a Node.js project using a native Node.js module.
   * `python`: How to use _DotHyphen_ from a Python project.
   * `wasm`
@@ -50,6 +53,7 @@ To get information about how to contribute to _Samuel_, please, read the specifi
 * `dohy` [CONTRIBUTING](./dohy/CONTRIBUTING.md) file.
 * `dothyphen` [CONTRIBUTING](./dothyphen/CONTRIBUTING.md) file.
 * `dothyphen-c` [CONTRIBUTING](./dothyphen-c/CONTRIBUTING.md) file.
+* `dothyphen-java` [CONTRIBUTING](./dothyphen-java/CONTRIBUTING.md) file.
 * `dothyphen-fermyon` [CONTRIBUTING](./dothyphen-fermyon/CONTRIBUTING.md) file.
 * `dothyphen-napi` [CONTRIBUTING](./dothyphen-napi/CONTRIBUTING.md) file.
 * `dothyphen-python` [CONTRIBUTING](./dothyphen-python/CONTRIBUTING.md) file.
@@ -69,6 +73,11 @@ The following requirements must be installed to contribute to each _Samuel_ Carg
 #### dothyphen-c
 
 * [gcc](https://gcc.gnu.org/) or some C compiler.
+
+#### dothyphen-java
+
+* [maven](https://maven.apache.org/).
+* [Open JDK](https://openjdk.org/) or [JDK](https://www.oracle.com/java/technologies/downloads/)
 
 #### dothyphen-fermyon
 
@@ -153,6 +162,7 @@ To get information about how to usage _Samuel_, please, read the specific docume
 * `dohy` [README](./dohy/README.md) file.
 * `dothyphen` [README](./dothyphen/README.md) file.
 * `dothyphen-c` [README](./dothyphen-c/README.md) file.
+* `dothyphen-java` [README](./dothyphen-java/README.md) file.
 * `dothyphen-fermyon` [README](./dothyphen-fermyon/README.md) file.
 * `dothyphen-napi` [README](./dothyphen-napi/README.md) file.
 * `dothyphen-python` [README](./dothyphen-python/README.md) file.

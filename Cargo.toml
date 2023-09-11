@@ -5,6 +5,7 @@ members = [
   "dothyphen",
   "dothyphen-c",
   "dothyphen-fermyon",
+  "dothyphen-java",
   "dothyphen-napi",
   "dothyphen-python",
   "dothyphen-shuttle",

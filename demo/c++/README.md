@@ -1,4 +1,4 @@
-# Python Demo
+# C++ Demo
 
 This is a demo to learn how to use `dothyphen_c` from a C++ code.
 

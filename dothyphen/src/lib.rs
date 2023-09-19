@@ -80,25 +80,25 @@ mod dothyphen_tests {
     use crate::translate;
 
     #[test]
-    fn nonascii_is_not_tranlated() {
+    fn nonascii_is_not_translated() {
         let result = translate("áéíóú");
         assert_eq!(result, "");
     }
 
     #[test]
-    fn space_is_tranlated() {
+    fn space_is_translated() {
         let result = translate(" ");
         assert_eq!(result, "/");
     }
 
     #[test]
-    fn alphabetic_is_tranlated() {
+    fn alphabetic_is_translated() {
         let result = translate("Hello Samuel");
         assert_eq!(result, ".... . .-.. .-.. --- / ... .- -- ..- . .-..");
     }
 
     #[test]
-    fn numeric_is_tranlated() {
+    fn numeric_is_translated() {
         let result = translate("123456789");
         assert_eq!(
             result,
@@ -107,7 +107,7 @@ mod dothyphen_tests {
     }
 
     #[test]
-    fn alphanumeric_is_tranlated() {
+    fn alphanumeric_is_translated() {
         let result = translate("Hello 123456789 Samuel");
         assert_eq!(
             result,

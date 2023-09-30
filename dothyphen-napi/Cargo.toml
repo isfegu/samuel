@@ -1,15 +1,15 @@
 [package]
 edition = "2021"
 name = "dothyphen-napi"
-version = "0.1.4"
+version = "0.1.5"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = { version = "2.13.2", default-features = false, features = ["napi4"] }
-napi-derive = "2.13.0"
-dothyphen = { path = "../dothyphen", version = "0.2.1" }
+napi = { version = "2.13", default-features = false, features = ["napi4"] }
+napi-derive = "2.13"
+dothyphen = "0.2"
 
 [build-dependencies]
-napi-build = "2.0.1"
+napi-build = "2.0"

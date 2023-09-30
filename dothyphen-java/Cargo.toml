@@ -8,5 +8,5 @@ name = "dotjyphen"
 crate-type = ["cdylib"]
 
 [dependencies]
-jni = "0.21.1"
-dothyphen = { path = "../dothyphen", version = "0.2.1" }
+jni = "0.21"
+dothyphen = "0.2"

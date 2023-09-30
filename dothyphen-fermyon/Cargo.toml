@@ -1,6 +1,6 @@
 [package]
 name = "dothyphen-fermyon"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 repository = "https://github.com/isfegu/samuel"
 description = "A Fermyon WebAssembly wrapper around DotHyphen, a simple ASCII to Morse translator"
@@ -19,4 +19,4 @@ http = "0.2"
 serde_json = "1.0"
 spin-sdk = { git = "https://github.com/fermyon/spin", tag = "v1.1.0" }
 wit-bindgen-rust = { git = "https://github.com/bytecodealliance/wit-bindgen", rev = "cb871cfa1ee460b51eb1d144b175b9aab9c50aba" }
-dothyphen = { path = "../dothyphen", version = "0.2.0" }
+dothyphen = "0.2"

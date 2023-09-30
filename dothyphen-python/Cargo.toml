@@ -1,6 +1,6 @@
 [package]
 name = "dothyphen-python"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 repository = "https://github.com/isfegu/samuel"
 description = "A Python wrapper of DotHyphen, a simple ASCII to Morse translator."
@@ -14,8 +14,8 @@ name = "dotpyphen"
 crate-type = ["cdylib"]
 
 [dependencies]
-dothyphen = { path = "../dothyphen", version = "0.2.1" }
+dothyphen = "0.2"
 
 [dependencies.pyo3]
-version = "0.19.2"
+version = "0.19"
 features = ["abi3-py38"]

@@ -15,8 +15,6 @@ To build `dothyphen-shuttle`, run:
 dothyphen-shuttle~ cargo build
 ```
 
-> Important: Unlike other _Workspace members_, _DotHyphen Shuttle_ uses _DotHyphen_ from crates.io instead of `dothyphen` folder/member. This is because when _DotHyphen Shuttle_ is built from Shuttle Cloud only `dothyphen-shuttle` member is available but not others like `dothyphen`, therefore `dothyphen` dependency is obtained from crates.io (as you can see in [Cargo.toml](../dothyphen-shuttle/Cargo.toml) file).
-
 We can run _DotHyphen Shuttle_ locally simulating the Shuttle Cloud environment, running:
 
 ```bash

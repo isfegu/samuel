@@ -1,6 +1,6 @@
 # Samuel
 
-The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a utility that can be used from other languages and multiple environments. The utility used as excuse is _DotHyphen_, a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
+The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a utility that can be used from other languages and multiple environments. The utility used as excuse is _DotHyphen_, a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) and vice versa translator.
 
 Currently _Samuel_ can be used from:
 
@@ -19,7 +19,7 @@ Currently _Samuel_ can be used from:
 _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/workspaces.html), composed by the following members:
 
 * `dohy`: A CLI for _DotHyphen_.
-* `dothyphen`: A simple ASCII to Morse translator and the core of Samuel project.
+* `dothyphen`: A simple ASCII to Morse and vice versa translator and the core of Samuel project.
 * `dothyphen-c`: A C/C++ wrapper of _DotHyphen_.
 * `dothyphen-fermyon`: A rust wrapper of _DotHyphen_ to enable Fermyon Cloud deployment.
 * `dothyphen-java`: A Java wrapper of _DotHyphen_.

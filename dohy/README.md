@@ -2,20 +2,28 @@
 
 A CLI for _DotHyphen_.
 
-_DotHyphen_ is a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator developed in Rust.
+_DotHyphen_ is a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) and vice versa translator developed in Rust.
 
 ## Usage
 
 From source, using cargo:
 
 ```bash
-dohy~ cargo run -- --translate "Hello world"
+dohy~ cargo run -- --translate "Hello world" --output morse # Should print: .... . .-.. .-.. --- / .-- --- .-. .-.. -.
+```
+
+```bash
+dohy~ cargo run -- --translate ".... . .-.. .-.. --- / .-- --- .-. .-.. -." --output ascii # Should print: hello world
 ```
 
 Using the binary:
 
 ```bash
-~ dohy --translate "Hello world"  # Should print .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+~ dohy --translate "Hello world" --output morse # Should print: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+```
+
+```bash
+~ dohy --translate --translate ".... . .-.. .-.. --- / .-- --- .-. .-.. -." --output ascii # Should print: hello world
 ```
 
 ## Contributing

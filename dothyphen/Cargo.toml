@@ -1,9 +1,9 @@
 [package]
 name = "dothyphen"
-version = "0.2.1"
+version = "1.0.0"
 edition = "2021"
 repository = "https://github.com/isfegu/samuel"
-description = "A simple ASCII to Morse translator."
+description = "A simple ASCII to Morse and vice versa translator."
 license = "MIT"
 authors = ["isfegu"]
 readme = "README.md"
@@ -15,4 +15,4 @@ categories = ["encoding"]
 crate-type = ["rlib", "cdylib"]
 
 [dependencies]
-lazy_static = "1.3.0"
+lazy_static = "1.4.0"

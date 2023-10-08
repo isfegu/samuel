@@ -1,14 +1,17 @@
 # DotHyphen
 
-A basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator.
+A basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) and vice versa translator.
 
 ## Usage
 
 ```rust
-use dothyphen::translate;
+use dothyphen::*;
 
-let translated_string = translate("Hello World");
-println!("{}", translated_string); // Should print .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+let morse_string = translate::to_morse("Hello World");
+println!("{}", morse_string); // Should print: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+
+let ascii_string = translate::to_morse(".... . .-.. .-.. --- / .-- --- .-. .-.. -..");
+println!("{}", ascii_string); // Should print: Hello World
 ```
 
 ## Contributing

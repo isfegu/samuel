@@ -8,7 +8,9 @@ Something to run a web server, like Python.
 
 ## Usage
 
-First copy `dothyphen-wasm/output/wasm/web/dothyphen_wasm.js` and `dothyphen-wasm/output/wasm/web/dothyphen_wasm_bg.wasm` files into `demo/wasm/web/lib` directory.
+First build `dothyphen_wasm` to be used in a web page, following the instructions located in the [CONTRIBUTING.md](../../../dothyphen-wasm/CONTRIBUTING.md) file.
+
+Next, copy `dothyphen-wasm/output/wasm/web/dothyphen_wasm.js` and `dothyphen-wasm/output/wasm/web/dothyphen_wasm_bg.wasm` files into `demo/wasm/web/lib` directory.
 
 Then, execute:
 

@@ -2,14 +2,16 @@
 
 _DotHyphen WebAssembly_ is a WebAssembly wrapper of _DotHyphen_ ready to be used as npm package.
 
-_DotHyphen_ is a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) translator developed in Rust.
+_DotHyphen_ is a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code) and vice versa translator developed in Rust.
 
 ## Usage
 
 ```javascript
 import * as dothyphen from "@isfegu/dothyphen-wasm";
 
-console.log(dothyphen.translate("Hello World"));  // Should print .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+console.log(dothyphen.to_morse("Hello World"));  // Should print: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+
+console.log(dothyphen.to_ascii(".... . .-.. .-.. --- / .-- --- .-. .-.. -.."));  // Should print: hello world
 ```
 
 ## Contributing

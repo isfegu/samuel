@@ -8,9 +8,10 @@
 
 <body>
   <script type="module">
-    import init, { translate } from "./lib/dothyphen_wasm.js";
+    import init, { to_morse, to_ascii } from "./lib/dothyphen_wasm.js";
     init().then(() => {
-      alert(translate("Hello World"));
+      alert(to_morse("Hello World"));
+      alert(to_ascii(".... . .-.. .-.. --- / ... .- -- ..- . .-.."));
     });
   </script>
 </body>

@@ -12,7 +12,8 @@
 	"settings": {
 		"rust-analyzer.linkedProjects": [
 			"./dothyphen-shuttle/Cargo.toml",
-			"./dothyphen-fermyon/Cargo.toml"
+			"./dothyphen-fermyon/Cargo.toml",
+			"./dothyphen-wasi/Cargo.toml"
 		]
 	}
 }

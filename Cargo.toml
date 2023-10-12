@@ -9,5 +9,6 @@ members = [
   "dothyphen-napi",
   "dothyphen-python",
   "dothyphen-shuttle",
+  "dothyphen-wasi",
   "dothyphen-wasm"
 ]

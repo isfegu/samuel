@@ -1,0 +1,14 @@
+[package]
+name = "dothyphen-wasi"
+version = "1.0.0"
+edition = "2021"
+repository = "https://github.com/isfegu/samuel"
+description = "A WebAssembly wrapper of DotHyphen, a simple ASCII to Morse translator and vice versa, ready to be used from a WebAssembly runtime."
+license = "MIT"
+authors = ["isfegu"]
+readme = "README.md"
+homepage = "https://github.com/isfegu/samuel/dothyphen-wasi"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+dothyphen = "1.0.0"

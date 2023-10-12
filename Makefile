@@ -1,4 +1,4 @@
-test-integration: test-integration-c test-integration-napi test-integration-python test-integration-wasm-nodejs
+test-integration: test-integration-c test-integration-napi test-integration-python test-integration-wasm-nodejs test-integration-wasm-wasi
 
 test-integration-c: build-c-staticlib
 	cd tests/c++; \
@@ -22,6 +22,10 @@ test-integration-wasm-nodejs: build-wasm-npm
 	cd tests/wasm/nodejs; \
 	yarn; \
 	yarn test
+
+test-integration-wasm-wasi: build-wasm-wasi
+	cd tests/wasm/wasi; \
+	./wasmtime.test.sh
 
 build-c-staticlib:
 	cd dothyphen-c; \
@@ -47,3 +51,7 @@ build-wasm-npm:
 	wasm-pack build --release --target nodejs --scope isfegu --out-dir output/wasm/npm; \
 	cd ..
 
+build-wasm-wasi:
+	cd dothyphen-wasi; \
+	cargo build --target wasm32-wasi --release; \
+	cd ..

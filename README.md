@@ -5,12 +5,14 @@ The main goal of _Samuel_ is to be an excuse to learn how to use Rust to build a
 Currently _Samuel_ can be used from:
 
 * __Rust__ as a crate.
+* __WebAssembly runtime__ as WebAssembly/WASI package.
 * __Javascript/Typescript__ as a:
   * WebAssembly Node.js module.
   * Native Node.js module.
 * __Python__ as a Wheel package.
 * __C/C++__ as an static lib.
 * __Java__ as a dynamic lib called using JNI and jar package.
+* __Terminal__ as a CLI.
 * <https://dothyphen.fermyon.app/> as an HTTP EndPoint.
 * <https://dothyphen-shuttle.shuttleapp.rs> as an HTTP EndPoint.
 
@@ -26,6 +28,7 @@ _Samuel_ is a Cargo's [Workspace](https://doc.rust-lang.org/cargo/reference/work
 * `dothyphen-napi`: A native Node.js module of _DotHyphen_.
 * `dothyphen-python`: A Python wrapper of _DotHyphen_.
 * `dothyphen-shuttle`: A rust wrapper of _DotHyphen_ to enable Shuttle Cloud deployment.
+* `dothyphen-wasi`: A WebAssembly wrapper of _DotHyphen_ ready to be used from a WebAssembly runtime.
 * `dothyphen-wasm`: A WebAssembly wrapper of _DotHyphen_.
 
 Moreover, you can find other relevant directories, like:
@@ -58,6 +61,7 @@ To get information about how to contribute to _Samuel_, please, read the specifi
 * `dothyphen-napi` [CONTRIBUTING](./dothyphen-napi/CONTRIBUTING.md) file.
 * `dothyphen-python` [CONTRIBUTING](./dothyphen-python/CONTRIBUTING.md) file.
 * `dothyphen-shuttle` [CONTRIBUTING](./dothyphen-shuttle/CONTRIBUTING.md) file.
+* `dothyphen-wasi` [CONTRIBUTING](./dothyphen-wasi/CONTRIBUTING.md) file.
 * `dothyphen-wasm` [CONTRIBUTING](./dothyphen-wasm/CONTRIBUTING.md) file.
 
 Moreover, you can use the _Samuel_ [Github Discussions](https://github.com/isfegu/samuel/discussions).
@@ -106,10 +110,15 @@ Read the [official documentation](https://docs.shuttle.rs/introduction/installat
 
 > Info: In this documentation we assume Shuttle CLI is installed globally.
 
+#### dothyphen-wasi
+
+* [Wasmtime](https://wasmtime.dev/).
+* [`wasm32-wasi` target](https://rust-lang.github.io/rustup/concepts/toolchains.html).
+
 #### dothyphen-wasm
 
 * [Wasm-pack](https://rustwasm.github.io/wasm-pack/installer/).
-* [`wasm32-wasi` target](https://rust-lang.github.io/rustup/concepts/toolchains.html).
+* [`wasm32-unknown-unknown` target](https://rust-lang.github.io/rustup/concepts/toolchains.html).
 * [Node.js](https://nodejs.org).
 * [Yarm](https://yarnpkg.com/) or Npm (already installed with Node.js).
 
@@ -167,4 +176,5 @@ To get information about how to usage _Samuel_, please, read the specific docume
 * `dothyphen-napi` [README](./dothyphen-napi/README.md) file.
 * `dothyphen-python` [README](./dothyphen-python/README.md) file.
 * `dothyphen-shuttle` [README](./dothyphen-shuttle/README.md) file.
+* `dothyphen-wasi` [README](./dothyphen-wasi/README.md) file.
 * `dothyphen-wasm` [README](./dothyphen-wasm/README.md) file.

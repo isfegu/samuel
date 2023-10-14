@@ -9,9 +9,11 @@ _DotHyphen_ is a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code
 ```javascript
 import * as dothyphen from "@isfegu/dothyphen-wasm";
 
-console.log(dothyphen.to_morse("Hello World"));  // Should print: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+console.log(dothyphen.to_morse("Hello World")); 
+// .... . .-.. .-.. --- / .-- --- .-. .-.. -..
 
-console.log(dothyphen.to_ascii(".... . .-.. .-.. --- / .-- --- .-. .-.. -.."));  // Should print: hello world
+console.log(dothyphen.to_ascii(".... . .-.. .-.. --- / .-- --- .-. .-.. -.."));
+// hello world
 ```
 
 ## Contributing

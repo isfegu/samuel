@@ -11,10 +11,12 @@ _DotHyphen_ is a basic ASCII to [Morse](https://en.wikipedia.org/wiki/Morse_code
 
 int main () {
   const char* string_to_translate = "Hello world";
+  // C is in charge of the memory allocation
   int size = get_buffer_size(string_to_translate);
   char translation[size] = "";
   translate(string_to_translate, (uint8_t*) &translation, size);
-  printf("%s\n", translation); // Should print .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  printf("%s\n", translation); 
+  // .... . .-.. .-.. --- / .-- --- .-. .-.. -..
 
   return 0;
 }

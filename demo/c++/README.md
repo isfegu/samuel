@@ -8,13 +8,13 @@ This demo uses `gcc` and `Make` to compile the source code. Therefore, if you wa
 
 ## Usage
 
-Compile `dothyphen_c` running from the root of the repository:
+Bompile `dothyphen_c` running:
 
 ```bash
-~ cargo build
+dothyphen-c~ cargo build
 ```
 
-The static library compiled should be placed in `target/debug/libdotcyphen.a`. The header file created should be placed in `dothyphen_c/libdotcyphen.h`.
+The static library compiled will be placed in `target/debug/libdotcyphen.a`. The header file created will be placed in `dothyphen_c/libdotcyphen.h`.
 
 Compile the demo source code:
 
